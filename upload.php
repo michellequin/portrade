@@ -2,6 +2,7 @@
 
 if(is_array($_FILES)) {
 
+
 $my_array = array(
 	0 => array(
 		"./images/c_1.jpg", "./images/c_2.jpg", "./images/c_3.jpg"
@@ -31,7 +32,7 @@ $my_array = array(
 		"./images/x.jpg", "./images/y.jpg", "./images/z.jpg"
 		),
 	9 => array(
-		"./images/eng1.jpg", "./images/eng2.jpg", "./images/eng3.jpg"
+		"./images/h1.jpg", "./images/h2.jpg", "./images/h3.jpg"
 		),
 	);
 
