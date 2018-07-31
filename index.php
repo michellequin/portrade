@@ -164,7 +164,7 @@ $(document).ready(function (e) {
 			<div data-role="page" id="account" data-theme="a">
 				<div data-role="header" data-position="inline">
 					<h1>Portrade</h1>
-					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onClick="window.location.reload();">Log Out</a>
+					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onClick="location.href='#welcome';window.location.reload();">Log Out</a>
 					</div><!-- /header -->
 					<div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
 						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -196,7 +196,7 @@ $(document).ready(function (e) {
 			<div data-role="page" id="archive" data-theme="a">
 				<div data-role="header" data-position="inline">
 					<h1>Portrade</h1>
-					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onClick="window.location.reload();">Log Out</a>
+					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onClick="location.href='#welcome';window.location.reload();">Log Out</a>
 					</div><!-- /header -->
 					<div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
 						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -235,7 +235,7 @@ $(document).ready(function (e) {
 			<div data-role="page" id="home" data-theme="a">
 				<div data-role="header" data-position="inline">
 					<h1>Portrade</h1>
-					<a href="#welcome" id="logout" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onClick="window.location.reload();">Log Out</a>
+					<a href="#welcome" id="logout" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onClick="location.href='#welcome';window.location.reload();">Log Out</a>
 					</div><!-- /header -->
 					<div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
 						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -250,7 +250,7 @@ $(document).ready(function (e) {
 									<img src="photo.png"  class="icon-choose-image1"/>
 									<img src="photo.png"  class="icon-choose-image2"/>
 								</div>
-								<div class="icon-choose-image" >
+								<div class="icon-choose-image">
 								<input name="userImage" id="userImage" type="file" class="inputFile" multiple="multiple" onChange="showPreview(this);" />
 								</div>
 								
@@ -267,7 +267,7 @@ $(document).ready(function (e) {
 								<ul>
 									<li> <a href="#account" data-icon="user">Account</a> </li>
 									<li> <a href="#home" data-icon="home">Home</a> </li>
-									<li> <a href="#archive" data-icon="grid" id="arc">Archive</a> </li>
+									<li> <a href="#archive" data-icon="grid">Archive</a> </li>
 								</ul>
 							</div>
 						</div>
