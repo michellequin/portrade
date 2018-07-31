@@ -27,7 +27,6 @@
 <script type="text/javascript">
 
 function showPreview(objFileInput) {
-	console.log("here");
     if (objFileInput.files[0]) {
         	var fileReader = new FileReader();
         	fileReader.onload = function (e) {
@@ -87,7 +86,7 @@ $(document).ready(function (e) {
 			$("#s3").attr("src", $("#upload-preview3").attr("src"));
 			setInterval(function() {$("#body-overlay").hide(); },500);
 			},
-		  	error: function() 
+		  	error: function()
 	    	{
 	    	} 	        
 	   });
@@ -165,7 +164,7 @@ $(document).ready(function (e) {
 			<div data-role="page" id="account" data-theme="a">
 				<div data-role="header" data-position="inline">
 					<h1>Portrade</h1>
-					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right">Log Out</a>
+					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onclick="location.reload();">Log Out</a>
 					</div><!-- /header -->
 					<div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
 						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -197,7 +196,7 @@ $(document).ready(function (e) {
 			<div data-role="page" id="archive" data-theme="a">
 				<div data-role="header" data-position="inline">
 					<h1>Portrade</h1>
-					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right">Log Out</a>
+					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onclick="location.reload();">Log Out</a>
 					</div><!-- /header -->
 					<div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
 						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -205,7 +204,7 @@ $(document).ready(function (e) {
 					<div data-role="content" class="ui-content" data-theme="a">
 						<h2>Archive</h2>
 								<div class="row">
-								<div class="column">
+								<div id="mine" class="column">
 								<h3> My Photos: </h3>
 								<img class="icon-choose-image0">
 								<img class="icon-choose-image1">
@@ -232,11 +231,11 @@ $(document).ready(function (e) {
 					</div>
 				</div>
 
-				<!-- Home page, accessible via navbar -->
+			<!-- Home page, accessible via navbar -->
 			<div data-role="page" id="home" data-theme="a">
 				<div data-role="header" data-position="inline">
 					<h1>Portrade</h1>
-					<a href="#welcome" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right">Log Out</a>
+					<a href="#welcome" id="logout" data-rel="Log Out" data-role="button" data-icon="action" class="ui-btn-right" onclick="location.reload();">Log Out</a>
 					</div><!-- /header -->
 					<div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
 						<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -257,7 +256,7 @@ $(document).ready(function (e) {
 								
 							</div>
 							<div>
-							<input type="submit" value="Upload Photos" class="btnSubmit" />
+							<input type="submit" value="Upload Photos" class="btnSubmit"/>
 							</form>
 
 							</div>
@@ -268,7 +267,7 @@ $(document).ready(function (e) {
 								<ul>
 									<li> <a href="#account" data-icon="user">Account</a> </li>
 									<li> <a href="#home" data-icon="home">Home</a> </li>
-									<li> <a href="#archive" data-icon="grid">Archive</a> </li>
+									<li> <a href="#archive" data-icon="grid" id="arc">Archive</a> </li>
 								</ul>
 							</div>
 						</div>
@@ -320,6 +319,27 @@ $('.save').click(function(e) {
 
 
                 });
+
+// $('#logout').click(function(e) {
+// 	$("#upload-preview1").remove();
+// 	$("#upload-preview2").remove();
+// 	$("#upload-preview3").remove();
+// 	$("#targetLayer").children().remove();
+// 	$("#targetLayer").prepend("<img src='photo.png' class='icon-choose-image2'>");
+// 	$("#targetLayer").prepend("<img src='photo.png' class='icon-choose-image1'>");
+// 	$("#targetLayer").prepend("<img src='photo.png' class='icon-choose-image0'>");
+// });
+
+// $("#arc").click(function(e) {
+// 	$("#upload-preview1").remove();
+// 	$("#upload-preview2").remove();
+// 	$("#upload-preview3").remove();
+// 	$(".upload-preview").remove();
+// 	$("#targetLayer").children().remove();
+// 	$("#targetLayer").prepend("<img src='photo.png' class='icon-choose-image2'>");
+// 	$("#targetLayer").prepend("<img src='photo.png' class='icon-choose-image1'>");
+// 	$("#targetLayer").prepend("<img src='photo.png' class='icon-choose-image0'>");
+// });
 </script>
 
    </body>
