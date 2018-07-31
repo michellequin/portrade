@@ -29,10 +29,10 @@ function showPreview(objFileInput) {
     	if (objFileInput.files[0]) {
         	var fileReader = new FileReader();
         	fileReader.onload = function (e) {
-            	$("#icon-choose-image0").attr("src", e.target.result);
-            	$("#icon-choose-image0").css('width', "100%");
-            	$("#icon-choose-image0").css('height','100%');
-            	$("#icon-choose-image0").attr('class', "upload-preview");
+            	$(".icon-choose-image0").attr("src", e.target.result);
+            	$(".icon-choose-image0").css('width', "100%");
+            	$(".icon-choose-image0").css('height','100%');
+            	$(".icon-choose-image0").attr('class', "upload-preview");
 				$("#targetLayer").css('opacity','0.7');
 				$(".icon-choose-image").css('opacity','0.5');
         	}
@@ -41,10 +41,10 @@ function showPreview(objFileInput) {
 	if (objFileInput.files[1]) {
         	var fileReader = new FileReader();
         	fileReader.onload = function (e) {
-            	$("#icon-choose-image1").attr("src", e.target.result);
-            	$("#icon-choose-image1").css('width', "100%");
-            	$("#icon-choose-image1").css('height','100%');
-            	$("#icon-choose-image1").attr('class', "upload-preview");
+            	$(".icon-choose-image1").attr("src", e.target.result);
+            	$(".icon-choose-image1").css('width', "100%");
+            	$(".icon-choose-image1").css('height','100%');
+            	$(".icon-choose-image1").attr('class', "upload-preview");
 				$("#targetLayer").css('opacity','0.7');
 				$(".icon-choose-image").css('opacity','0.5');
         	}
@@ -53,10 +53,10 @@ function showPreview(objFileInput) {
 	if (objFileInput.files[2]) {
         	var fileReader = new FileReader();
         	fileReader.onload = function (e) {
-            	$("#icon-choose-image2").attr("src", e.target.result);
-            	$("#icon-choose-image2").css('width', "100%");
-            	$("#icon-choose-image2").css('height','100%');
-            	$("#icon-choose-image2").attr('class', "upload-preview");
+            	$(".icon-choose-image2").attr("src", e.target.result);
+            	$(".icon-choose-image2").css('width', "100%");
+            	$(".icon-choose-image2").css('height','100%');
+            	$(".icon-choose-image2").attr('class', "upload-preview");
 				$("#targetLayer").css('opacity','0.7');
 				$(".icon-choose-image").css('opacity','0.5');
         	}
@@ -78,6 +78,9 @@ $(document).ready(function (e) {
 		    {
 			$("#targetLayer").html(data);
 			$("#targetLayer").css('opacity','1');
+			$("#s1").attr("src", $("#upload-preview1").attr("src"));
+			$("#s2").attr("src", $("#upload-preview2").attr("src"));
+			$("#s3").attr("src", $("#upload-preview3").attr("src"));
 			setInterval(function() {$("#body-overlay").hide(); },500);
 			},
 		  	error: function() 
@@ -200,18 +203,15 @@ $(document).ready(function (e) {
 								<div class="row">
 								<div class="column">
 								<h3> My Photos: </h3>
-								<img id="icon-choose-image0">
-								<img id="icon-choose-image1">
-								<img id="icon-choose-image2">
+								<img class="icon-choose-image0">
+								<img class="icon-choose-image1">
+								<img class="icon-choose-image2">
 								</div>
 								<div class="column">
 								<h3> Stranger's Photos: </h3>
-								<img id="s1">
-								<img id="s2">
-								<img id="s3">
-								<script>
-									$("#s1").attr("id", "upload-preview1");
-								</script>
+								<img id="s1" style="width:100%;height:100%">
+								<img id="s2" style="width:100%;height:100%">
+								<img id="s3" style="width:100%;height:100%">
 								</div>
 								</div>
 								</div>
@@ -243,9 +243,9 @@ $(document).ready(function (e) {
 							<form id="uploadForm" action="upload.php" method="post">
 							<div id="targetOuter">
 								<div id="targetLayer">
-									<img src="photo.png"  id="icon-choose-image0"/>
-									<img src="photo.png"  id="icon-choose-image1"/>
-									<img src="photo.png"  id="icon-choose-image2"/>
+									<img src="photo.png"  class="icon-choose-image0"/>
+									<img src="photo.png"  class="icon-choose-image1"/>
+									<img src="photo.png"  class="icon-choose-image2"/>
 								</div>
 								<div class="icon-choose-image" >
 								<input name="userImage" id="userImage" type="file" class="inputFile" multiple="multiple" onChange="showPreview(this);" />
