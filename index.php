@@ -25,13 +25,15 @@
 
 				<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript">
+
 function showPreview(objFileInput) {
-    	if (objFileInput.files[0]) {
+    if (objFileInput.files[0]) {
         	var fileReader = new FileReader();
         	fileReader.onload = function (e) {
             	$(".icon-choose-image0").attr("src", e.target.result);
             	$(".icon-choose-image0").css('width', "100%");
             	$(".icon-choose-image0").css('height','100%');
+            	$(".icon-choose-image0").css('padding-bottom','5%');
             	$(".icon-choose-image0").attr('class', "upload-preview");
 				$("#targetLayer").css('opacity','0.7');
 				$(".icon-choose-image").css('opacity','0.5');
@@ -44,6 +46,7 @@ function showPreview(objFileInput) {
             	$(".icon-choose-image1").attr("src", e.target.result);
             	$(".icon-choose-image1").css('width', "100%");
             	$(".icon-choose-image1").css('height','100%');
+            	$(".icon-choose-image1").css('padding-bottom','5%');
             	$(".icon-choose-image1").attr('class', "upload-preview");
 				$("#targetLayer").css('opacity','0.7');
 				$(".icon-choose-image").css('opacity','0.5');
@@ -209,8 +212,8 @@ $(document).ready(function (e) {
 								</div>
 								<div class="column">
 								<h3> Stranger's Photos: </h3>
-								<img id="s1" style="width:100%;height:100%">
-								<img id="s2" style="width:100%;height:100%">
+								<img id="s1" style="width:100%;height:100%;padding-bottom:5%">
+								<img id="s2" style="width:100%;height:100%;padding-bottom:5%">
 								<img id="s3" style="width:100%;height:100%">
 								</div>
 								</div>

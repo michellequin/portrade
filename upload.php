@@ -24,13 +24,22 @@ $my_array = array(
 	6 => array(
 		"./images/ch1.jpg", "./images/ch2.jpg", "./images/ch3.jpg"
 		),
+	7 => array(
+		"./images/p1.jpg", "./images/p2.jpg", "./images/p3.jpg"
+		),
+	8 => array(
+		"./images/x.jpg", "./images/y.jpg", "./images/z.jpg"
+		),
+	9 => array(
+		"./images/eng1.jpg", "./images/eng2.jpg", "./images/eng3.jpg"
+		),
 	);
 
 shuffle($my_array);
 
 ?>
-<img src="<?=$my_array[0][0];?>" style="width:100%;height:100%" id="upload-preview1" class="upload-preview" />
-<img src="<?=$my_array[0][1];?>" style="width:100%;height:100%" id="upload-preview2" class="upload-preview" />
+<img src="<?=$my_array[0][0];?>" style="width:100%;height:100%;padding-bottom:5%" id="upload-preview1" class="upload-preview" />
+<img src="<?=$my_array[0][1];?>" style="width:100%;height:100%;padding-bottom:5%" id="upload-preview2" class="upload-preview" />
 <img src="<?=$my_array[0][2];?>" style="width:100%;height:100%" id="upload-preview3" class="upload-preview"/>
 <?php
 }
