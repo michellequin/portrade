@@ -27,6 +27,7 @@
 <script type="text/javascript">
 
 function showPreview(objFileInput) {
+	console.log("here");
     if (objFileInput.files[0]) {
         	var fileReader = new FileReader();
         	fileReader.onload = function (e) {
@@ -137,7 +138,7 @@ $(document).ready(function (e) {
 					<ul class=accountlist data-role="listview" style="padding-bottom: 5%;" data-inset="true">
 						<li><a class=accountlist style="background-color:#545454">Email Address: <input id="email" class="emailaddress" placeholder="name@email.com"></a></li>
 						<li><a class=accountlist style="background-color:#545454">Username: <input id="username" placeholder="yourname"></a></li>
-						<li><a class=accountlist style="background-color:#545454">Password: <input id="password" placeholder="abcdef"></a></li>
+						<li><a class=accountlist style="background-color:#545454">Password: <input type="password" id="password" placeholder="abcdef"></a></li>
 					</ul>
 					<a class="create" data-icon="check" data-iconpos="Save" data-role="button" data-rel="popup">Create Account</a>
 				</div>
